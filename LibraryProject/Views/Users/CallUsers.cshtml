@@ -1,0 +1,42 @@
+﻿@model LibraryProject.Models.Entity.Tbl_Users
+@{
+    ViewBag.Title = "CallUsers";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@using (Html.BeginForm("UpdateUsers", "Users", FormMethod.Post))
+{
+    <div style="margin-bottom:15px"></div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.ID)
+        @Html.TextBoxFor(c => c.ID, new { @class = "form-control" })
+        <br />
+        @*@Html.LabelFor(c => c.Name)*@
+        <label>Users Name</label>
+        @Html.TextBoxFor(u => u.Name, new { @class = "form-control" })
+        <br />
+        <label>Users Surname</label>
+        @Html.TextBoxFor(u => u.Surname, new { @class = "form-control" })
+        <br />
+        <label>Users Mail</label>
+        @Html.TextBoxFor(u => u.Mail, new { @class = "form-control" })
+        <br />
+        <label>Users Nickname</label>
+        @Html.TextBoxFor(u => u.User_Name, new { @class = "form-control" })
+        <br />
+        <label>Users Password</label>
+        @Html.TextBoxFor(u => u.Password, new { @class = "form-control" })
+        <br />
+        <label>Users Phone</label>
+        @Html.TextBoxFor(u => u.Phone, new { @class = "form-control" })
+        <br />
+        <label>Users School</label>
+        @Html.TextBoxFor(u => u.School, new { @class = "form-control" })
+        <br />
+    </div>
+    <div>
+        <button class="btn btn-warning">Update</button>
+    </div>
+}
+
+

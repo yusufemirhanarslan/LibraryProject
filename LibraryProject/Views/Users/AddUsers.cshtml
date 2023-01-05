@@ -1,0 +1,61 @@
+﻿@model LibraryProject.Models.Entity.Tbl_Users
+@{
+    ViewBag.Title = "AddUsers";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<form class="form-group" method="post">
+    <div></div>
+    <div style="margin-top:15px">
+        <label>Users Name</label>
+        @*<input type="text" class="form-control" name="Staff"/>*@
+        @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Name, "", new { @style = "color:forestgreen" })
+    </div>
+    <div style="margin-top:15px">
+        <label>Users Surname</label>
+        @*<input type="text" class="form-control" name="Staff"/>*@
+        @Html.TextBoxFor(x => x.Surname, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Surname, "", new { @style = "color:forestgreen" })
+    </div>
+    <div style="margin-top:15px">
+        <label>Mail Address</label>
+        @*<input type="text" class="form-control" name="Staff"/>*@
+        @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Mail, "", new { @style = "color:forestgreen" })
+    </div>
+    <div style="margin-top:15px">
+        <label>User Name(Nickname)</label>
+        @*<input type="text" class="form-control" name="Staff"/>*@
+        @Html.TextBoxFor(x => x.User_Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.User_Name, "", new { @style = "color:forestgreen" })
+    </div>
+    <div style="margin-top:15px">
+        <label>Password</label>
+        @*<input type="text" class="form-control" name="Staff"/>*@
+        @Html.TextBoxFor(x => x.Password, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Password, "", new { @style = "color:forestgreen" })
+    </div>
+    <div style="margin-top:15px">
+        <label>Photo Link</label>
+        @*<input type="text" class="form-control" name="Staff"/>*@
+        @Html.TextBoxFor(x => x.Photo, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Photo, "", new { @style = "color:forestgreen" })
+    </div>
+    <div style="margin-top:15px">
+        <label>Phone</label>
+        @*<input type="text" class="form-control" name="Staff"/>*@
+        @Html.TextBoxFor(x => x.Phone, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Phone, "", new { @style = "color:forestgreen" })
+    </div>
+    <div style="margin-top:15px">
+        <label>School</label>
+        @*<input type="text" class="form-control" name="Staff"/>*@
+        @Html.TextBoxFor(x => x.School, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.School, "", new { @style = "color:forestgreen" })
+    </div>
+    <div style="margin-top:15px">
+        <button class="btn btn-info" id="Btn1">Add Users</button>
+    </div>
+</form>
+

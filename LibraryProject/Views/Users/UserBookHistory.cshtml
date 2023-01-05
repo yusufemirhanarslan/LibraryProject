@@ -1,0 +1,28 @@
+﻿@using LibraryProject.Models.Entity
+@model List<Tbl_Action>
+@{
+    ViewBag.Title = "UserBookHistory";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>User: @ViewBag.user</h2>
+<br />
+<table class="table table-danger">
+    <tr>
+        <th>Book Name</th>
+        <th>Staff Name</th>
+        <th>Ship Date</th>
+        <th>Delivery Date</th>
+    </tr>
+
+    @foreach(var x in Model)
+            {
+                <tr>
+                    <td>@x.Tbl_Book.Name</td>
+                    <td>@x.Tbl_Staff.Staff</td>
+                    <td>@Convert.ToDateTime(x.Ship_Date).ToString("dd/MM/yyyy")</td>
+                    <td>@Convert.ToDateTime(x.Delivery_Date).ToString("dd/MM/yyyy")</td>
+                </tr>
+            }
+
+</table>

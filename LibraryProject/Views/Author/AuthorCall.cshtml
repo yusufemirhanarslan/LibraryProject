@@ -1,0 +1,38 @@
+﻿@model LibraryProject.Models.Entity.Tbl_Author
+@{
+    ViewBag.Title = "AuthorCall";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@using (Html.BeginForm("AuthorUpdate","Author", FormMethod.Post))
+            {
+                <div style="margin-bottom:15px"></div>
+                <div class="form-group">
+                    <div style="margin-bottom:15px">
+                        <label>Author ID</label>
+                        @Html.TextBoxFor(author => author.ID, new { @class = "form-control" })
+
+                    </div>
+
+                    <div style="margin-bottom:15px">
+                        <label>Author Name</label>
+                        @Html.TextBoxFor(author => author.Name, new { @class = "form-control" })
+
+                    </div>
+
+                    <div style="margin-bottom:15px">
+                        <label>Author Surname</label>
+                        @Html.TextBoxFor(author => author.Surname, new { @class = "form-control" })
+
+                    </div>
+
+                    <div style="margin-bottom:15px">
+                        <label>Author Detail</label>
+                        @Html.TextBoxFor(author => author.Detail, new { @class = "form-control" })
+
+                    </div>
+
+                    <button class="btn btn-warning">Update Author Information</button>
+
+                </div>
+            }

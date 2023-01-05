@@ -1,0 +1,42 @@
+﻿@using LibraryProject.Models.Entity
+@using PagedList
+@using PagedList.Mvc
+@model PagedList.IPagedList<Tbl_Users>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2> Users </h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>USER ID</th>
+        <th>USER NAME</th>
+        <th>USER SURNAME</th>
+        <th>USER SCHOOL</th>
+        <th>DELETE</th>
+        <th>UPDATE</th>
+        <th>USER BOOK HISTORY</th>
+    </tr>
+    @foreach (var us in Model)
+    {
+        <tr>
+            <td>@us.ID</td>
+            <td>@us.Name</td>
+            <td>@us.Surname</td>
+            <td>@us.School</td>
+            <td><a href="/Users/UsersDelete/@us.ID" class="btn btn-danger">Delete</a></td>
+            <td><a href="/Users/CallUsers/@us.ID" class="btn btn-success">Update</a></td>
+            <td><a href="/Users/UserBookHistory/@us.ID" class="btn btn-success" style="background-color:lightseagreen">Book History</a></td>
+        
+        </tr>
+    }
+</table>
+@Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new
+{
+    page
+}))
+<a href="/Users/AddUsers/" class="btn btn-primary">Add New Users</a>
+
+

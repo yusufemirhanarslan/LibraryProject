@@ -1,0 +1,67 @@
+﻿@using LibraryProject.Models.Entity
+@model List<Tbl_Admin>
+@{
+    ViewBag.Title = "Index2";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<link rel="stylesheet" href="/webAdmin/plugins/fontawesome-free/css/all.min.css">
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Admin User</th>
+        <th>Authority</th>
+        <th>Delete</th>
+        <th>Edit</th>
+    </tr>
+    @foreach(var adminUser in Model)
+        {
+           <tr>
+               <td>@adminUser.ID</td>
+               <td>@adminUser.AdminUser</td>
+               <td>@adminUser.Authority</td>
+               <td>
+                   <a class="btn btn-info btn-sm" href="/Settings/UpdateAdmin/@adminUser.ID">
+                       <i class="fas fa-pencil-alt">
+                       </i>
+                       Edit
+                   </a>
+               </td>
+               <td>
+                   <a class="btn btn-danger btn-sm" href="/Settings/DeleteAdmin/@adminUser.ID">
+                       <i class="fas fa-trash">
+                       </i>
+                       Delete
+                    </a>
+               </td>
+           </tr>
+        }
+</table>
+<br />
+<button class="btn btn-primary" data-toggle="modal" data-target="#Modal1">Add new Admin</button>
+
+<div class="modal" id="Modal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Add Admin Panel</h2>
+            </div>
+            <form method="post" action="/Settings/NewAdmin/"></form>
+            <div class="modal-body">
+                <label>Admin Name</label>
+                <input type="text" name="AdminUser" class="form-control" />
+                <br />
+                <label>Password</label>
+                <input type="text" name="Password" class="form-control" />
+                <br />
+                <label>Authority</label>
+                <input type="text" name="Authority" class="form-control" />
+                <br />
+                <button class="btn btn-info">Save</button>
+            </div>
+        </div>
+    </div>
+</div>

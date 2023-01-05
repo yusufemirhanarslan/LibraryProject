@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9349edbb5b214365be6368ba2d2c29e9" Name="Diagram1" ZoomLevel="81">
+        <EntityTypeShape EntityType="DB_LibraryModel.Tbl_Action" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_LibraryModel.Tbl_Author" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_LibraryModel.Tbl_Book" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_LibraryModel.Tbl_Case" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_LibraryModel.Tbl_Category" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_LibraryModel.Tbl_Punishment" Width="1.5" PointX="7.5" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_LibraryModel.Tbl_Staff" Width="1.5" PointX="5.875" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_LibraryModel.Tbl_Users" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <AssociationConnector Association="DB_LibraryModel.FK_Tbl_Action_Tbl_Book" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_LibraryModel.FK_Tbl_Action_Tbl_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_LibraryModel.FK_Tbl_Punishment_Tbl_Action" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_LibraryModel.FK_Tbl_Book_Tbl_Author" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_LibraryModel.FK_Tbl_Book_Tbl_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_LibraryModel.FK_Tbl_Punishment_Tbl_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_LibraryModel.FK_Tbl_Action_Tbl_Staff" />
+        <EntityTypeShape EntityType="DB_LibraryModel.Tbl_About" Width="1.5" PointX="8.375" PointY="7.75" />
+        <EntityTypeShape EntityType="DB_LibraryModel.Tbl_Contect" Width="1.5" PointX="0.75" PointY="9.75" />
+        <EntityTypeShape EntityType="DB_LibraryModel.Tbl_Admin" Width="1.5" PointX="3.375" PointY="9.75" />
+      </Diagram>
+      <Diagram DiagramId="d5f3344c1d274446ab5ccc45dec607c7" Name="Diagram2" >
+        <EntityTypeShape EntityType="DB_LibraryModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

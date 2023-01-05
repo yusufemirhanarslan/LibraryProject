@@ -1,0 +1,27 @@
+﻿@model LibraryProject.Models.Entity.Tbl_Admin
+@{
+    ViewBag.Title = "UpdateAdmin";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@using (Html.BeginForm("UpdateAdmin", "Settings", FormMethod.Post))
+{
+    <div style="margin-bottom:15px"></div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.ID)
+        @Html.TextBoxFor(c => c.ID, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(c => c.AdminUser)
+        @Html.TextBoxFor(c => c.AdminUser, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(c => c.Password)
+        @Html.TextBoxFor(c => c.Password, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(c => c.Authority)
+        @Html.TextBoxFor(c => c.Authority, new { @class = "form-control" })
+    </div>
+    <div>
+        <button class="btn btn-warning">Update</button>
+    </div>
+}
+

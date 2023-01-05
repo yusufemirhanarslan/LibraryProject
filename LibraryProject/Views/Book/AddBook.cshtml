@@ -1,0 +1,46 @@
+﻿@model LibraryProject.Models.Entity.Tbl_Book
+@{
+    ViewBag.Title = "AddBook";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<form class="form-group" method="post">
+    <div></div>
+
+    <div style="margin-top:15px">
+        <label>Book Name</label>
+        @Html.TextBoxFor(b => b.Name, new { @class = "form-control" })
+    </div>
+
+    <div style="margin-top:15px">
+        <label>Book Category</label>
+        @Html.DropDownListFor(b => b.Tbl_Category.ID, (List<SelectListItem>)ViewBag.vrb1, new {@class ="form-control"})
+    </div>
+
+    <div style="margin-top:15px">
+        <label>Author Of Book</label>
+        @Html.DropDownListFor(b => b.Tbl_Author.ID, (List<SelectListItem>)ViewBag.vrb2, new { @class = "form-control" })
+    </div>
+
+    <div style="margin-top:15px">
+        <label>Production Year</label>
+        @Html.TextAreaFor(b => b.Production_Year, new { @class = "form-control" })
+    </div>
+
+    <div style="margin-top:15px">
+        <label>Publisher</label>
+        @Html.TextAreaFor(b => b.Publisher, new { @class = "form-control" })
+    </div>
+
+    <div style="margin-top:15px">
+        <label>Page</label>
+        @Html.TextAreaFor(b => b.Page, new { @class = "form-control" })
+    </div>
+
+    <div style="margin-top:15px">
+        <button class="btn btn-info">Add Book</button>
+    </div>
+    <input type="hidden" name="Check" value="True" />   
+</form>
+
+

@@ -1,0 +1,26 @@
+﻿@using LibraryProject.Models.Entity;
+@model List<Tbl_Book>
+@{
+    ViewBag.Title = "AuthorBooks";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>Book Author: @ViewBag.author</h2>
+<br />
+<table class="table table-striped">
+    <tr>
+        <th>ID</th>
+        <th>Book Name</th>
+        <th>Category</th>
+        <th>Publisher</th>
+    </tr>
+    @foreach(var x in Model)
+            {
+                <tr>
+                    <td>@x.ID</td>
+                    <td>@x.Name</td>
+                    <td>@x.Tbl_Category.Name</td>
+                    <td>@x.Publisher</td>
+                </tr>
+            }
+</table>
